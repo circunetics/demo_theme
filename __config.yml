@@ -1,0 +1,624 @@
+####################################
+######     Global start     ######
+####################################
+name: 'UltraReach'
+title: 'AI-Driven Communication, Fueled by Extensive Big Data'
+email: 'circunetics@gmail.com'
+description: >-
+  UltraReach, a state-of-the-art AI communication engine, dives deep into vast databases of over three billion individual profiles to redefine enterprise communication. Our unparalleled expertise across industries equips us to provide bespoke solutions for multifaceted applications. Experience the new era of communication with UltraReach.
+baseurl: ""
+url: ""
+locale: "en_US"
+logo: assets/img/logo/ultrareach-logo.png
+logo2: assets/img/logo/ultrareach-logo.png
+
+author:
+  name: UltraReach
+
+# paginate
+paginate: 6
+paginate_path: "/blog/page:num/"
+#paginate: 5 # Number of works per page
+#paginate_path: "/work/page:num/"
+
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:slug/
+  pages:
+    output: true
+    permalink: /:collection/:slug/
+  works:
+    output: true
+    permalink: /work/:path/
+  services:
+    output: true
+    permalink: /service/:path/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: "_posts_work"
+      type: works
+    values:
+      layout: posts
+
+  - scope:
+      path: "_posts_service"
+      type: services
+    values:
+      layout: post
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+#  - scope:
+#      path: "_works"
+#      type: works
+#    values:
+#      layout: blog
+
+timezone: America/Los_Angeles
+
+disqus_shortname: ultrareach-discussions
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-archives
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-archives
+
+# jekyll archive
+jekyll-archives:
+  enabled:
+    - tags
+    - categories
+  layouts:
+    category: category-archive
+    tag: tag-archive
+  permalinks:
+    tag: '/tags/:name/'
+    category: '/categories/:name/'
+
+####################################
+######      Global end      ######
+####################################
+getform_id: 'e5e1f635-da5d-4fc9-9a47-2e10735146f5'
+
+# SUBSCRIBE FORM
+mailchimp:
+  user-id: 'c4e151b63d84a9bac731252a2'
+  list-id: 'ca518aaa14'
+  username: 'ultrareach.us5'
+
+####################################
+######        Copyright       ######
+####################################
+copyright_text: Copyright © 2023 All rights reserved to
+company_url: '#'
+
+# SEO Related
+google_site_verification : ''
+bing_site_verification   : ''
+yandex_site_verification : ''
+naver_site_verification  : ''
+
+# Social Sharing
+twitter:
+  username               : 'UltraReach'
+facebook:
+  username               : 'UltraReach'
+  app_id                 : ''
+  publisher              : ''
+og_image                 :  '/assets/img/og_image.jpg'
+social:
+  type                   : 'Organization'
+  name                   : 'UltraReach'
+  links: []
+
+# Analytics
+analytics:
+  provider               : false
+  google:
+    tracking_id          : ''
+    anonymize_ip         : true
+
+##########################################################################
+################################# menus  #################################
+##########################################################################
+menus:
+  - name: Home
+    url: '/'
+  - name: About
+    url: '/about.html'
+  - name: Services
+    url:  '/service.html'
+  - name: 'Use Cases'
+    url: '/blog_work/'
+
+  - name: Blog
+    url: '/blog/'
+
+  - name: Tools
+    url: '#'
+    children:
+      - name: Chat
+        url: 'http://chat.ultrareach.co'
+      - name: CRM
+        url: 'http://crm.ultrareach.co'
+      - name: Maps
+        url: 'http://maps.ultrareach.co'
+      - name: API
+        url: 'http://api.ultrareach.co'
+      - name: Dashboard
+        url: 'http://dashboard.ultrareach.co'
+      - name: Knowledge Graph
+        url: 'http://knowledge.ultrareach.co'
+
+  - name: Contact
+    url: /contact.html
+
+
+
+
+##########################################################################
+######################## hero ############################################
+##########################################################################
+hero1:
+  title: "Redefining Communication: Engaging Billions Simultaneously"
+  subtitle: "UltraReach taps into vast data reservoirs to craft specialized enterprise communication with more than 
+  half of human population, engaging over 100 million businesses from varied sectors."
+  intro: Advanced AI Driven Communication
+  service_link: service.html
+  service_text: Delve Deeper <i class="icofont-long-arrow-right"></i>
+  title_link: '/work.html'
+  title_text: Our Endeavors <i class="icofont-long-arrow-right"></i>
+#  video_link: https://www.youtube.com/watch?v=ku6dEtynrRI
+#  video_text: <i class="fas fa-play"></i> <span class="how-txt">Our Philosophy</span>
+
+##########################################################################
+######################## Features #######################################
+##########################################################################
+features:
+- image: assets/img/icons/man.png
+  type: AI-Powered Concurrent Communication
+  description: UltraReach is capable of concurrent communication with half the human population, leveraging data from over three billion individual profiles.
+- image: assets/img/icons/checked.png
+  type: Smart Matchmaking
+  description: With advanced algorithms, we perfectly align businesses, ensuring precise and impactful connections.
+- image: assets/img/icons/rating.png
+  type: M&A Communication Mastery
+  description: Expertise in bridging businesses; we connect clients to crucial decision-makers, curating unique strategies for every engagement.
+- image: assets/img/icons/consult.png
+  type: In-depth Data Analysis
+  description: UltraReach delves into vast datasets, unveiling intricate insights about global demographics and economic trends.
+
+
+##########################################################################
+############################ about #######################################
+##########################################################################
+about:
+  title: "UltraReach: Vanguard of AI-Integrated Communication"
+  description: UltraReach merges the strength of AI with the vastness of big data, transforming enterprise communication landscapes. Our expertise traverses various sectors, providing solutions meticulously crafted for every unique demand. From analyzing intricate global data trends to pioneering M&A communication strategies, our services encompass all facets of modern communication.
+  image: assets/img/about/about-1.png
+  subtitle: Charting the Future of AI-Enhanced Big Data Communication
+
+
+##########################################################################
+############################ facts #######################################
+##########################################################################
+facts:
+- image: assets/img/icons/1.png
+  counter: '2382'
+  title: Project Completed
+- image: assets/img/icons/2.png
+  counter: '1382'
+  title: Team Members
+- image: assets/img/icons/feedback.png
+  counter: '2382'
+  title: Happy Clients
+
+
+##########################################################################
+######################## whatwedo #######################################
+##########################################################################
+whatwedo:
+  contact_link: contact.html
+  contact_text: Engage with Us
+  subtitle: Our Prowess
+  title: Forging AI-Driven Big Data Communication
+
+
+##########################################################################
+############################ wedo #######################################
+##########################################################################
+wedo:
+- image: assets/img/icons/3.png
+  title: Data-Driven Mass Communication
+  description: Leveraging vast datasets to facilitate targeted mass communication across diverse audiences and industries.
+  service_text: Explore More
+  service_link: '/service/sustainability-assessment/'#'/data-driven-mass-communication/'
+
+- image: assets/img/icons/4.png
+  title: Precision Connections
+  description: Using advanced algorithms to bridge gaps and establish connections, ensuring optimal outcomes for every engagement.
+  service_text: Discover More
+  service_link: '/precision-connections/'
+
+- image: assets/img/icons/5.png
+  title: Strategic Communication Excellence
+  description: Perfecting communication strategies by understanding and analyzing specific needs, ensuring clarity and impact in every interaction.
+  service_text: Learn More
+  service_link: '/strategic-communication-excellence/'
+
+
+####################################################################
+######################## faq ######################################
+####################################################################
+faq:
+  description: Dive into the nuances of Data-Driven Personalized Mass Communication
+  image: assets/img/faq/fag-bg.png
+  title: Queries on Personalized Mass Communication
+
+faqs:
+- title: 1. What is personalized mass communication?
+  description: Personalized mass communication is the art and science of broadcasting messages to a large audience while ensuring each message is tailored to the individual recipient, enhancing engagement and relevance.
+- title: 2. How does data-driven approach enable personalized mass communication?
+  description: Utilizing vast data sets, we can discern individual preferences, behaviors, and histories, allowing us to tailor messages to each recipient even in mass communication campaigns.
+- title: 3. What are the benefits of such personalization on a mass scale?
+  description: Personalization enhances user engagement, fosters loyalty, increases conversion rates, and reduces communication fatigue among the audience.
+- title: 4. How do we maintain the balance between personalization and privacy?
+  description: We adhere to stringent data privacy regulations, ensuring personalization doesn't infringe upon individual privacy rights. Only aggregated and anonymized data is used for crafting communication strategies.
+- title: 5. Can personalized mass communication be applied across multiple channels?
+  description: Yes, our solutions allow for tailored mass messaging across various channels, be it email, social media, SMS, or web notifications, ensuring consistent and personalized interactions.
+
+
+
+##########################################################################
+######################## subscribe #######################################
+##########################################################################
+subscribe:
+  description: Stay updated with our latest insights and offerings. Subscribe now.
+  image: assets/img/subscribe/sub-right.png
+  title: Stay Connected
+
+##########################################################################
+############################ blog #######################################
+##########################################################################
+
+blog:
+  intro: See our Latest &amp; Popular Tips &amp; Tricks <br> from our Experts
+  title: Blog
+
+
+##########################################################################
+######################## reviews #######################################
+##########################################################################
+reviews:
+- quotes: Leveraging data-driven mass communication solutions has reshaped our approach to outreach. The depth of expertise and the transformative impact we've witnessed is truly commendable.
+  author: David Anderson
+  status: CEO
+
+- quotes: The precision with which we've been able to establish connections using these solutions is remarkable. It's revolutionized how we engage with our audience.
+  author: Sarah Johnson
+  status: Director
+
+
+##########################################################################
+############################ footer ######################################
+##########################################################################
+footer:
+  address: |
+    <li>Location: Lava</li> 
+    <li>Contact: <a href="tel:+91762938590">+91762938590</a></li>
+    <li>Mail: <a href="mailto:circunetics@gmail.com">circunetics@gmail.com</a></li>
+  bg_image: assets/img/footer/footer-bg.png
+  copyright: "© 2023, UltraReach Inc. All Rights Reserved."
+  description: UltraReach is an AI-driven communication engine with the capability to engage in concurrent one-to-one communication with half the world's population. Drawing from detailed profiles of over three billion individuals and countless companies, we analyze up to a thousand distinct fields to craft precision-tailored communication solutions. Join us in redefining the future of communication.
+  logo: assets/img/logo/ultrareach-logo.png
+
+
+##########################################################################
+######################## promo ############################################
+##########################################################################
+promo:
+  contact_link: contact.html
+  contact_text: Reach Out
+  subtitle: Get in Touch
+  title: Have a project or inquiry? We're here to help.
+
+
+##########################################################################
+######################## socials profile #################################
+##########################################################################
+socials:
+  - url: '#'
+    icon: 'fab fa-facebook-f'
+  - url: '#'
+    icon: 'fab fa-instagram'
+  - url: '#'
+    icon: 'fab fa-twitter'
+  - url: '#'
+    icon: 'fab fa-youtube'
+
+
+####################################################################
+######################## feedbacks #################################
+####################################################################
+feedbacks:
+- image: assets/img/review/review-pic.png
+  description: Data-driven communication solutions have been pivotal in reshaping our outreach and engagement strategies. The depth of expertise offered has played a key role in our advancements.
+  author: Mark Johnson
+  status: CEO
+- image: assets/img/review/review-pic.png
+  description: The tailored matchmaking solutions using data insights have been revolutionary. Our ability to efficiently align with the right stakeholders has been significantly enhanced.
+  author: Emily Williams
+  status: Director
+- image: assets/img/review/review-pic.png
+  description: The communication strategies applied during mergers and acquisitions have made integrations smoother, fostering transparency among all involved parties.
+  author: Michael Davis
+  status: CFO
+
+##########################################################################
+######################## work #######################################
+##########################################################################
+work:
+  description: A showcase of our recent projects and <br> their success stories.
+  more_link: /work.html
+  more_text: View All <i class="icofont-long-arrow-right"></i>
+  title: Portfolio
+works:
+#- image: assets/img/work/1.png
+- image: assets/img/blog/11.png
+- image: assets/img/work/2.png
+- image: assets/img/work/3.png
+
+####################################################################
+######################## feature ###################################
+####################################################################
+feature_service:
+  title: 'Success Stories of Data-Driven Mass Communication Solutions'
+  subtitle: 'Case Studies'
+
+feature_services:
+  - name: Optimized Communication for Tech Sector
+    image: '/assets/img/work/7.jpg'
+    description: A top-tier tech company improved its stakeholder communication by harnessing data-driven insights, leading to boosted engagement and a higher ROI.
+    service_text: Read More
+    service_link: '/optimized-communication-tech-sector/'
+  - name: Precise Connections in Luxury Markets
+    image: '/assets/img/work/8.jpg'
+    description: A luxury product vendor successfully reached high-net-worth buyers using precise data insights, streamlining the sales process.
+    service_text: Read More
+    service_link: '/precise-connections-luxury-markets/'
+  - name: Efficient Communication in Business Mergers
+    image: '/assets/img/work/9.jpg'
+    description: In a notable business merger, effective and clear communication was facilitated between all parties, ensuring a seamless integration.
+    service_text: Read More
+    service_link: '/efficient-communication-business-mergers/'
+
+
+####################################################################
+######################## case ######################################
+####################################################################
+service:
+  subtitle: Services
+  title: "UltraReach's Specialized Big Data Communication Services"
+singlearea:
+  image: assets/img/subscribe/sub-right.png
+  subtitle: Newsletter
+  title: "Stay Updated with UltraReach's Latest Insights"
+
+case:
+  subtitle: Explore our recent projects and their success stories
+  title: Case Studies
+  work_link: '/work/'
+  work_text: View All <i class="icofont-long-arrow-right"></i>
+cases:
+- image: assets/img/work/7.jpg
+  title: Tech Industry Communication
+  subtitle: Big Data Enhanced Strategy
+- image: assets/img/work/8.jpg
+  title: Luxury Market Matchmaking
+  subtitle: Precision Connections
+- image: assets/img/work/9.jpg
+  title: M&A Communication Strategy
+  subtitle: Tailored for Success
+
+
+#feature_service:
+#  title: 'Success Stories of UltraReach Big Data Communication Solutions'
+#  subtitle: 'Case Studies'
+#
+#feature_services:
+#  - name: Tailored Communication for Tech Industry
+#    image: '/assets/img/work/7.jpg'
+#    description: UltraReach helped a leading tech firm enhance its stakeholder communication using big data insights, resulting in increased engagement and ROI.
+#    service_text: Read More
+#    service_link: '/tailored-communication-tech-industry/'
+#  - name: Luxury Market Precision Matchmaking
+#    image: '/assets/img/work/8.jpg'
+#    description: We connected a luxury yacht seller with potential high-net-worth buyers, ensuring a swift and efficient sales process.
+#    service_text: Read More
+#    service_link: '/luxury-market-precision-matchmaking/'
+#  - name: M&A Communication for a Major Deal
+#    image: '/assets/img/work/9.jpg'
+#    description: UltraReach played a pivotal role in a high-profile merger, ensuring clear communication between all stakeholders and a smooth transition.
+#    service_text: Read More
+#    service_link: '/ma-communication-major-deal/'
+
+#feedbacks:
+#- image: assets/img/review/review-pic.png
+#  description: UltraReach's big data solutions have transformed our communication strategies. Their expertise is unparalleled, and they've been instrumental in our success.
+#  author: Mark Johnson
+#  status: CEO
+#- image: assets/img/review/review-pic.png
+#  description: The precision matchmaking service from UltraReach is a game-changer. We've been able to connect with the right clients efficiently.
+#  author: Emily Williams
+#  status: Director
+#- image: assets/img/review/review-pic.png
+#  description: UltraReach's M&A communication strategies have streamlined our merger processes, ensuring clear communication between all stakeholders.
+#  author: Michael Davis
+#  status: CFO
+
+# collections:
+#   services:
+#     output: true
+#     permalink: /service/:path/
+
+
+# whatarea1:
+# - image: assets/img/icons/3.png
+#   title: Sustainability Assessment
+#   description: Our team provides sustainability assessments for financial institutions, helping them understand their current sustainability practices and identify areas for improvement.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/4.png
+#   title: ESG Integration
+#   description: Our team helps financial institutions integrate environmental, social, and governance (ESG) factors into their investment processes and decision-making.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/5.png
+#   title: Sustainable Investment Strategies
+#   description: Our team helps financial institutions develop and implement sustainable investment strategies that align with their values and contribute to a more sustainable future.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/6.png
+#   title: Impact Investing
+#   description: Our team helps financial institutions design and implement impact investing strategies that generate positive social and environmental outcomes while delivering financial returns.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/7.png
+#   title: Green Bond Issuance
+#   description: Our team provides guidance and support for financial institutions looking to issue green bonds, helping them access new sources of capital for sustainable projects.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/8.png
+#   title: ESG Reporting and Transparency
+#   description: Our team helps financial institutions improve their ESG reporting and transparency, enabling them to better communicate their sustainability practices to stakeholders.
+#   service_text: Explore Service
+#   service_link: '#'
+
+
+
+
+# whatarea1:
+# - image: assets/img/icons/3.png
+#   title: Business Analysis
+#   description: According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+#     elite.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/4.png
+#   title: Financial Planning
+#   description: According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+#     elite.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/5.png
+#   title: Digital Marketing
+#   description: According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+#     elite.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/6.png
+#   title: Business Consulting
+#   description: According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+#     elite.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/7.png
+#   title: Creative Design
+#   description: According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+#     elite.
+#   service_text: Explore Service
+#   service_link: '#'
+# - image: assets/img/icons/8.png
+#   title: Email Marketing
+#   description: According to lorem ipsum dolo siti ameat dui too consecteture consecteture
+#     elite.
+#   service_text: Explore Service
+#   service_link: '#'
+
+
+####################################################################
+######################## Team ######################################
+####################################################################
+# teams:
+# - image: assets/img/team/1.jpg
+#   username: Emiley Philifs
+#   profession: Digital marketer
+# - image: assets/img/team/2.jpg
+#   username: Emiley Philifs
+#   profession: Digital marketer
+# - image: assets/img/team/3.jpg
+#   username: Emiley Philifs
+#   profession: Digital marketer
+# - image: assets/img/team/4.jpg
+#   username: Emiley Philifs
+#   profession: Digital marketer
+# - image: assets/img/team/5.jpg
+#   username: Emiley Philifs
+#   profession: Digital marketer
+# - image: assets/img/team/6.jpg
+#   username: Emiley Philifs
+#   profession: Digital marketer
+# - image: assets/img/team/7.jpg
+#   username: Emiley Philifs
+#   profession: Digital marketer
+# - image: assets/img/team/8.jpg
+#   username: Emiley Philifs
+#   profession: Digital marketer

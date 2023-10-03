@@ -1,0 +1,80 @@
+ _layouts/work-layout.html
+
+ Header: Showcasing the title, subtitle, and image
+<header style="background: url({{ page.background }}) no-repeat center center; background-size: cover;">
+    <div style="background-color: rgba(0, 0, 0, 0.6); padding: 50px;">
+        <h1 style="color: white; font-size: 2.5em;">{{ page.title }}</h1>
+        <p style="color: white; font-size: 1.5em;">{{ page.subtitle }}</p>
+    </div>
+</header>
+
+<!-- Main Content Area -->
+<main style="padding: 40px;">
+    {{ content }}
+</main>
+
+<!-- Optional Footer -->
+<footer style="background-color: #333; padding: 20px;">
+    <p style="color: white; text-align: center;">© 2023 Circunetics Research</p>
+</footer>
+<!--============================================= &ndash;&gt;-->
+<!--    <div class="single-area de-padding">-->
+<!--        <div class="container">-->
+<!--            <div class="single-page-info">-->
+<!--                <aside class="sidebar">-->
+<!--                    &lt;!&ndash;Search&ndash;&gt;-->
+<!--                    <div class="sidebar-widget search">-->
+<!--                        <form>-->
+<!--                            <input type="text" placeholder="Search" id="search-input">-->
+<!--                            <button class="sub-btn"><i class="fas fa-search"></i></button>-->
+<!--                        </form>-->
+<!--                        <div class="p-3">-->
+<!--                            <ul id="results-container" class="mx-3"></ul>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;categories&ndash;&gt;-->
+<!--                    <div class="sidebar-widget cate">-->
+<!--                        <h4 class="widget-title">Case Category</h4>-->
+<!--                        <ul>-->
+<!--                            {% assign categories_list = site.categories %}-->
+<!--                            {% for category in categories_list %}-->
+<!--                            <li>-->
+<!--                                <a href="{{site.base_url }}/categories/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' | replace: '-&', '' }}">-->
+<!--                                    {{ category[0] | camelcase }}-->
+<!--                                    <span>-->
+<!--                                        {{ category[0].size }}-->
+<!--                                    </span>-->
+<!--                                </a>-->
+<!--                            </li>-->
+<!--                            {% endfor %}-->
+<!--                            {% assign categories_list = nil %}-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;Recent Post&ndash;&gt;-->
+<!--                    <div class="sidebar-widget recent-post wow fadeInUp" data-wow-duration="1s"-->
+<!--                        data-wow-delay=".6s"-->
+<!--                        style="visibility: visible; animation-duration: 1s; animation-delay: 0.6s; animation-name: fadeInUp;">-->
+<!--                        <h4 class="widget-title">Recent Post</h4>-->
+<!--                        <div class="recent-post-content">-->
+<!--                            {%- for post in site.posts limit:5 -%}-->
+<!--                            <div class="recent-post-single">-->
+<!--                                <div class="recent-post-img">-->
+<!--                                    <a href="{{post.url}}">-->
+<!--                                        <img src="{{post.image | relative_url }}" alt="thumb">-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                                <div class="recent-post-info">-->
+<!--                                    <a href="#"><span>{{post.date | date_to_string}}</span></a>-->
+<!--                                    <a href="{{post.url}}">-->
+<!--                                        <h5>{{post.title | truncate: 27, '' }}</h5>-->
+<!--                                    </a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            {%- endfor -%}-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </aside>-->
+<!--                {{ content }}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
